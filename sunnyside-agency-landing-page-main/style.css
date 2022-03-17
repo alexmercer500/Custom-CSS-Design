@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+   height: 40px;
+   width: 200px;
+}
+
+body {
+    max-width: 1440px;
+    height: 100vh;
+    font-family: 'Barlow', sans-serif;
+}
+.upper {
+    background-image: url(images/desktop/image-header.jpg);
+    background-position: center;
+    background-size:cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 35%;
+}
+
+header li {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    padding: 15px;
+    transition: 0.2s ease-in;
+}
+header li:hover {
+    background-color: skyblue;
+    border-radius: 50px;
+}
+.upper h1 {
+    font-size: 3.5rem;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+.ham {
+   display: none;
+}
+.upper .arrow {
+    margin-top: 100px;
+    position: absolute;
+    left: 49%;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: 
+    "one two"
+    "three four"
+    "five six";
+}
+.box3,
+.box4,
+.box5,
+.box6 {
+    margin-top: -5px;
+}
+.box img {
+    width: 100%;
+}
+.box1,
+.box4 {
+    width: 100%;
+    padding: 120px 120px;
+}
+.box h2{
+    font-family: 'Fraunces', serif;
+    max-inline-size: 500px;
+    font-size: 2.5rem; 
+}
+.box1 p,
+.box4 p{
+    line-height: 2rem;
+    color: gray;
+    margin-bottom: 80px;
+}
+.box1 a,
+.box4 a{
+    font-size: 1.5rem;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;   
+}
+.box1 a::after,
+.box4 a::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    display: block;
+    opacity: 0.6;
+    border-radius: 10px;
+    transform: translateY(-7px);
+}
+.box1 a::after {
+    background-color: hsl(51, 100%, 49%);
+}
+.box4 a::after {
+    background-color: hsl(7, 99%, 70%);
+}
+
+.box5 {
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+.box6 {
+    background-image: url(images/desktop/image-photography.jpg);
+    background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+}
+.box5 h3 {
+    font-family: 'Fraunces', serif;
+    margin-top: 450px;
+    color: hsl(167, 40%, 24%);
+}
+.box6 h3{
+    font-family: 'Fraunces', serif;
+    margin-top: 450px;
+    color: hsl(198, 62%, 26%);
+}
+.box5 p {
+    margin:30px 130px 0px 130px;
+    line-height: 2rem;  
+    color: hsl(167, 40%, 24%);
+}
+.box6 p {
+    margin:30px 140px 0px 140px;
+    line-height: 2rem;  
+    color: hsl(198, 62%, 26%);
+}
+.lower {
+    text-align: center;
+}
+.lower h3 {
+    font-size: 1.5rem;
+    font-family: 'Fraunces', serif;
+    text-transform: uppercase;
+    color: gray;
+    margin-top: 100px;
+}
+.review {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review h4 {
+    font-family: 'Fraunces', serif;
+}
+.review p{
+    padding: 0px;
+    margin: 0px 10px 50px 10px;
+    line-height: 2rem;
+    font-weight: 550;
+    color: rgb(75, 70, 70);
+}
+.review h5 {
+    font-family: 'Fraunces', serif;
+    color: gray;
+    margin-top: 10px;
+}
+.review img {
+    width: 100px;
+    border-radius: 100%;
+    margin-bottom: 50px;
+}
+
+.example {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.example img {
+    width: 100%;
+}
+
+footer {
+    background-color: hsl(168, 34%, 41%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logo1 {
+    margin: 50px 0px;
+}
+.service a {
+    cursor: pointer;
+    text-decoration: none;
+    color: hsl(167, 40%, 24%);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0px 30px 50px 30px ;
+    transition: 0.2s ease-in;
+}
+.service a:hover {
+    color: #fff;
+}
+
+.social img {
+    width: 35px;
+    margin: 50px 20px;
+    background-color: hsl(168, 34%, 41%);
+    cursor: pointer;
+}
+.box1 {
+    grid-area: one;
+}
+.box2 {
+    grid-area: two;
+}
+.box3 {
+    grid-area: three;
+}
+.box4 {
+    grid-area: four;
+}
+.box5 {
+    grid-area: five;
+}
+.box6 {
+    grid-area: six;
+}
+@media (max-width:1300px){
+    .box1,
+    .box4 {
+        width: 100%;
+        padding: 20px 20px;
+    }   
+    .box5 p,
+    .box6 p {
+        margin: 0px 50px;
+    }
+    .review {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        padding: 10px;
+    }
+}
+@media (min-width:728px) and (max-width:1000px){
+    
+    header ul {
+        flex-grow: 1;
+    }
+    .upper h1 {
+        font-size: 4rem;
+        text-align: center;
+    }
+    .arrow {
+        top: 180px;
+    }
+    .box1,
+    .box4 {
+        width: 100%;
+        padding: 15px;
+    } 
+    .box1 p,
+    .box4 p{
+        width: 100%;
+        margin-bottom: 10px;
+    }    
+    .box5,
+    .box6  {
+        background-size: cover;
+        background-position: center;
+    }
+    .box5 p,
+    .box6 p {
+        margin: 0px 50px;
+    }
+    .box5 h3,
+    .box6 h3 {
+        margin-top: 450px;   
+    }
+    .review p {
+        margin: auto;
+    }
+    
+}
+@media (max-width:728px) {
+    body {
+        max-width: 100%;
+    }
+    .upper {
+        background-image: url(images/mobile/image-header.jpg);
+        background-size:cover;
+        background-position: center;
+    }
+    .upper ul {
+        transform: scale(0,0);
+        flex-direction: column;
+        position: absolute;
+        border-radius: 10px 0px 10px 10px;
+        border-right: none;
+        top: 110px;
+        left: 5%;
+        width: 90%;
+        background-color: #fff;
+    }
+    .upper ul.active {
+        transform: scale(1,1);
+        transition: 0.3s ease-in;
+        transform-origin: right;
+    }
+
+    .upper ul::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: -50px;
+        right: 0;
+        border-top: 25px solid transparent;
+        border-left: 25px solid transparent;
+        border-right: 25px solid #fff;
+        border-bottom: 25px solid #fff;
+    }
+    .upper li {
+        color: black;
+    }
+    .ham {
+        display: block;
+        height: 30px;
+    }
+    .box {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "two"
+        "one"
+        "three"
+        "four"
+        "five"
+        "six";
+    }
+    
+    .example {
+        grid-template-columns: 1fr 1fr;
+    }
+    .example img {
+        max-width: 100%;
+    }
+    .review {
+        min-width: 100%;
+        display: block;
+        padding: 10px;
+    }
+    .review p{
+        margin: 0px 70px;
+        line-height: 2rem;
+        font-weight: 550;
+        color: rgb(75, 70, 70);
+    }
+    .review h5 {
+        color: gray;
+        margin-top: 5px;
+    }
+    .review img {
+        width: 100px;
+        border-radius: 100%;
+        margin:50px 0px 0px 20px;
+    }
+    .box1,
+    .box4 {
+        margin: 0px;
+        padding: 20px 60px;
+        text-align: center;
+    }
+    .box1 a::after, 
+    .box4 a::after {
+        left: 0px;
+    }
+    .box h2{
+        font-size: 2.5rem; 
+    }
+    .box1 p,
+    .box4 p{
+        line-height: 2rem;
+        color: gray;
+    }
+    .box5 {
+        background-image: url(images/mobile/image-graphic-design.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .box6 {
+        background-image: url(images/mobile/image-photography.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        text-align: center;
+    }
+    .box5 p,
+    .box6 p {
+        margin: 20px 60px;
+    }
+    footer {
+        width: 100%;
+    }
+    .service a {
+        margin: 0px 20px 30px 20px ;
+    }
+    header li:hover {
+        background-color: skyblue;
+        border-radius: 10px;
+        color: #fff;
+    }
+}
