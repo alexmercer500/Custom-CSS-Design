@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    --base-font: 28px;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--Dark-Blue);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    height: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: var(--Dark-Grayish-Blue);
+    text-align: center;
+    position: relative;
+}
+
+.advice-number {
+    margin: 30px auto;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Neon-Green);
+    text-transform: uppercase;
+}
+
+.advice {
+    color: var(--Light-Cyan);
+    font-size: var(--base-font);
+    margin-top: 100px;
+    padding: 20px;
+    font-weight: 700;
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile {
+    padding: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.juggle {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--Neon-Green);
+    margin: 0 auto;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: 0.3s ease-in;
+}
+
+
+.dice {
+    width: 30px;
+}
+
+.attribution {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.attribution a {
+    color: hsl(240, 100%, 100%);
+    font-weight: 700;
+}
+
+@media (min-width:600px) {
+    .container {
+        max-width: 600px;
+        height: 50%;
+    }
+    .advice {
+        margin-top: 10px;
+    }
+    .juggle:hover {
+        box-shadow: 5px 5px 50px 10px var(--Neon-Green);
+    }
+
+    .desktop {
+        display: block;
+        padding: 10px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mobile {
+        display: none;
+    }
+}
