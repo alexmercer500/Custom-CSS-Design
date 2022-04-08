@@ -1,0 +1,126 @@
+@mixin dimention {
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px 0;
+    font-size: 16px;
+}
+.product-reviews {
+    position: relative;
+    height: 1100px;
+    
+    .review {
+        margin: 30px auto;
+        background-color: $Dark-Blue-testimonials;
+        border-radius: 5px;
+        max-width: 450px;
+        p {
+           padding: 20px;
+           line-height: 1.5rem;
+           font-size: $base-font;
+        }
+        .user {
+            display: inline-flex;
+            align-items: center;
+            padding: 20px;
+            
+            img {
+                width: 50px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+            h5 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+
+    .product-trial {
+        background-color: $Dark-Blue-testimonials;
+        text-align: center;
+        width: 90%;
+        max-width: 750px;
+        margin: 0 auto;
+        border-radius: 5px;
+        padding: 10px;
+        position: absolute;
+        left: 50%;
+        bottom: -33%;
+        transform: translate(-50%, -50%);
+
+        h1 {
+            font-size: 1.2rem;
+            margin: 20px;
+        }
+        p {
+            font-size: $base-font;
+            line-height: 1.5rem;
+        }
+        span {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: 30PX auto;
+            
+            input {
+                @include dimention();
+                padding-left: 30px;
+                font-size: $base-font;
+                outline: none;
+            }
+            button {
+                @include dimention();
+                color: #ffff;
+                background-color: $Blue-inside;
+                font-weight: 700;
+
+                &:hover {
+                    box-shadow: 1px 1px 10px royalblue;
+                }
+            }
+        }
+        #notify {
+            color: $Cyan-inside;
+            margin-top: -40px;
+            font-size: $base-font;
+            padding-bottom: 15px;
+
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .product-reviews {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        height: 750px;
+
+        .review {
+            margin-top: 100px;
+            max-width: 370px;
+            height: 250px;
+        }
+    }
+
+    .product-trial {
+
+        h1 {
+            font-size: 2rem !important;
+        }
+        span {
+            
+            flex-direction: row !important;
+            justify-content: space-between;
+            input {
+                width: 350px;
+            }
+            button {
+                width: 200px;
+            }
+        }
+      }
+}
+

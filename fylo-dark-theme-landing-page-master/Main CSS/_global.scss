@@ -1,0 +1,13 @@
+$Dark-Blue-intro: hsl(217, 28%, 15%);
+$Dark-Blue-main: hsl(218, 28%, 13%);
+$Dark-Blue-footer: hsl(216, 53%, 9%);
+$Dark-Blue-testimonials: hsl(219, 30%, 18%);
+$Cyan-inside: hsl(176, 68%, 64%);
+$Blue-inside: hsl(198, 60%, 50%);
+$Light-Red: hsl(0, 100%, 63%);
+$base-font: 14px;
+
+@mixin hover-anchor {
+    color: $Light-Red;
+    text-decoration: underline;
+}

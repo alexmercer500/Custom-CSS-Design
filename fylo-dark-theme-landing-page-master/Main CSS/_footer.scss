@@ -1,0 +1,112 @@
+@mixin lower-center {
+    display: flex;
+    margin: 20px;
+}
+
+.lower-section {
+    padding-top: 250px;
+    background-color: $Dark-Blue-footer;
+
+    .logo2 {
+        margin-left: 30px;
+        width: 200px;
+    }
+
+    .description {
+        @include lower-center();
+
+        img {
+            height: 20px;
+        }
+
+        p {
+            margin-left: 20px;
+            line-height: 1.5rem;
+            max-inline-size: 350px;
+        }
+    }
+
+    .contact {
+        @include lower-center();
+        flex-direction: column;
+
+        a {
+            text-decoration: none;
+            color: #ffff;
+            margin: 10px 0;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .bottom-navigation {
+
+        .bottom-nav {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 0 10px 20px;
+
+            a {
+                margin-bottom: 10px;
+                text-decoration: none;
+                color: #ffff;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    color: $Light-Red;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+    .social-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 150px;
+
+        img {
+            width: 50px;
+            border-radius: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: 0.2s ease-in;
+
+            &:hover {
+                color: $Light-Red;
+                background-color: $Light-Red;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 800px) {
+    .lower-section {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        .lower-section-events {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            .bottom-navigation {
+                display: flex;
+                justify-content: space-between;
+                width: 250px;
+            }
+
+            .social-link {
+                align-items: flex-start;
+                margin-left: 30px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+}

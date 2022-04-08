@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+@import './global';
+@import './social';
+@import './Product-application';
+@import './production';
+@import './reviews';
+@import './footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin flex-align ($justify-content) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+}
+
+@mixin transition {
+    transition: all 0.2s ease-in-out;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    color: #ffff;
+    background-color: $Dark-Blue-intro;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1440px;
+    margin: 20px auto;
+
+    .logo img {
+        width: 100px;
+    }
+
+    .nav-link {
+        @include flex-align(space-around);
+
+        a {
+            font-size: $base-font;
+            font-weight: 700;
+            color: #ffff;
+            margin-left: 20px;
+            text-decoration: none;
+            @include transition();
+
+            &:hover {
+                @include hover-anchor();
+            }
+        }
+    }
+}
+
+.product-intro {
+    text-align: center;
+    margin: 25px;
+    line-height: 2rem;
+    background-image: url(Back/bg-curvy-mobile.svg);
+
+
+    img {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        line-height: 1.5rem;
+        font-size: $base-font;
+        margin-top: 20px;
+    }
+
+    button {
+        width: 70%;
+        height: 50px;
+        margin-top: 20px;
+        border-radius: 50px;
+        border: none;
+        background-color: $Cyan-inside;
+        color: #ffff;
+        font-size: $base-font;
+        font-weight: 700;
+
+        &:hover {
+            box-shadow: 1px 1px 10px $Cyan-inside;
+        }
+    }
+}
+
+@media (min-width:460px) {
+    header {
+        .logo img {
+            width: 180px;
+        }
+
+        .nav-link a {
+            font-size: 20px;
+        }
+    }
+
+    .product-intro {
+        max-width: 1000px;
+        margin: 0 auto;
+
+        h1,
+        p {
+            max-width: 430px;
+            margin: 20px auto;
+        }
+
+        button {
+            max-width: 200px;
+        }
+    }
+}

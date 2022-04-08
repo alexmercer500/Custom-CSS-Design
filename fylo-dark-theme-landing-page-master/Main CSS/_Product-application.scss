@@ -1,0 +1,33 @@
+.product-application {
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+
+    .box {
+        max-width: 400px;
+        margin: 0 auto;
+        img {
+            height: 80px;
+            margin-bottom: 25px;
+
+        }
+        h1 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        p {
+            line-height: 1.5rem;
+            margin: 5px 20px;
+            font-size: $base-font;
+        }
+    }
+}
+@media (min-width: 800px){
+    .product-application {
+        grid-template-columns: 1fr 1fr;
+        max-width: 800px;
+        margin: 50px auto;
+    }
+}
