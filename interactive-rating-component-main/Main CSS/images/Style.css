@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Overpass:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--White);
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+    --base-font: 15px;
+}
+
+body {
+    background-color: var(--Very-Dark-Blue);
+    font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    border-radius: 20px;
+    margin: 0 20px;
+    height: 400px;
+    background-color: hsl(216, 25%, 22%);
+}
+
+.box1 {
+    margin: 25px;
+}
+
+.box1 .star {
+    padding: 15px;
+    background-color: hsl(217, 11%, 32%);
+    border-radius: 50%;
+}
+
+.box1 h1 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.box1 p {
+    font-size: var(--base-font);
+    line-height: 1.5rem;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.rating .rate {
+    font-weight: 700;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: hsl(217, 11%, 32%);
+    transition: 0.2s ease-in;
+}
+.rate:hover {
+    background-color: var(--Orange);
+}
+
+/* javascript classess to control ratings and next page trasition */
+.rated.rate {
+    background-color: var(--Orange);
+}
+.active.rate {
+    background-color:hsl(216, 2%, 48%); ;
+}
+
+/* rating and transition ends here */
+#error-card {
+    color: #ff0000;
+    height: 20px;
+}
+.box1 button {
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--Orange);
+    border: none;
+    height: 45px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: 0.2s ease-in;
+}
+button:hover {
+    background-color:hsl(25, 97%, 59%);
+    box-shadow: 2px 2px 10px hsl(25, 97%, 59%);
+    ;
+}
+
+/* After Submission Box */
+
+.box2 {
+    padding: 25px;
+    margin-top: 20px;
+    text-align: center;
+    display: none;
+}
+
+.box2 .rate-me {
+    background-color: hsl(217, 11%, 32%);
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: var(--Orange);
+}
+
+.box2 .note {
+    line-height: 1.5rem;
+}
+.attribution {
+    margin-top: 50px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:400px) {
+    .container {
+        max-width: 400px;
+    }
+}
