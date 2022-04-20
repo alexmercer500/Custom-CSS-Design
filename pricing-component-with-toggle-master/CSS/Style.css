@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+
+    /* ### Primary Colors */
+
+    --Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+    /* ### Neutral-Colors */
+
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(240, 3%, 36%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+    --base-font: 15px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Light-Grayish-Blue);
+    background-image: url(images/bg-top.svg);
+    background-position: 200px -35px;
+    background-size:auto;
+    background-repeat: no-repeat;
+    
+}
+
+/* ----------Mobile first ---------- */
+main {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper h1 {
+    font-size: 1.5rem;
+    margin-top: 50px;
+}
+
+.duration {
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-duration {
+    margin: 20px;
+    font-size: var(--base-font);
+
+}
+
+.toggle-plan {
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-plan::after {
+    content: "";
+    height: 30px;
+    width: 30px;
+    background-color: #ffff;
+    display: block;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: 0.2s ease;
+}
+
+.active.toggle-plan::after {
+    transform: translateX(40px);
+}
+
+.plan-info {
+    width: 320px;
+}
+
+.pricing {
+    border-top: 1px solid transparent;
+    background-color: #ffff;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px gray;
+}
+
+.pricing>* {
+    margin: 30px;
+    font-size: var(--base-font)
+}
+
+.pricing h2 {
+    font-size: 1.2rem;
+}
+
+.pricing h3 {
+    font-size: 4rem;
+}
+
+.month-plan {
+    display: none;
+}
+
+.pricing h4 {
+    border-bottom: 1px solid rgb(218, 215, 215);
+    padding-bottom: 15px;
+}
+
+.pricing h4:first-of-type {
+    border-top: 1px solid rgb(218, 215, 215);
+    padding-top: 30px;
+}
+
+.price-component2 h4 {
+    border-bottom: 1px solid #ffff;
+}
+
+.price-component2 h4:first-of-type {
+    border-top: 1px solid #ffff;
+}
+
+.price-component1 .btn,
+.price-component3 .btn {
+    cursor: pointer;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    height: 40px;
+    background-color: hsl(237, 63%, 64%);
+    border: none;
+    border-radius: 10px;
+    color: #ffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+}
+
+.price-component2 {
+    background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #ffff;
+}
+
+.price-component2 .btn {
+    cursor: pointer;
+    width: 80%;
+    margin: 0 auto 30px auto;
+    height: 40px;
+    background-color: #ffff;
+    border: none;
+    border-radius: 10px;
+    color: hsl(237, 63%, 64%);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+}
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
+    body {
+        background-position: 1000px 0px;
+    }
+
+    .plan-info {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pricing {
+        width: 350px;
+    }
+
+    .duration {
+        width: fit-content;
+    }
+    .price-component2 {
+        transform: scale(1.1);
+    }
+    .price-component1 .btn:hover,
+    .price-component3 .btn:hover {
+        background-color: #ffff;
+        color: black;
+        border: 2px solid black;
+    }
+    .price-component2 .btn:hover {
+        background-color: hsl(237, 63%, 64%);
+        border: 2px solid black;
+        color: #ffff;
+    }
+}
