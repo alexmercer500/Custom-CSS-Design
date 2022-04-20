@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    transition: 0.2s ease-in-out;
+}
+
+:root {
+    --Strong-cyan: hsl(172, 67%, 45%);
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Grayish-cyan: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    --base-font: 24px;
+    --animate: 0.2s ease-in-out;
+}
+
+/* -----Mobile First------ */
+.logo {
+    display: flex;
+    margin: 30px auto;
+}
+
+.box-element {
+    max-width: 350px;
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: var(--White);
+}
+
+.box-element button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--animate);
+}
+
+.tip-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.tip-select button {
+    background-color: var(--Very-dark-cyan);
+    color: #fff;
+}
+
+.active.tip-btn {
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.box-element input {
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Light-grayish-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.currency {
+    position: relative;
+}
+
+.people-icon {
+    position: relative;
+}
+
+.people-icon img,
+.currency img {
+    width: 15px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-element input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.bill-calculate>* {
+    margin: 10px 0 5px 0;
+}
+
+.bill-calculate p {
+    color: var(--Dark-grayish-cyan);
+}
+
+.biil-amount,
+.party {
+    width: 97%;
+    height: 40px;
+    font-size: var(--base-font);
+    text-align: right;
+    padding-right: 10px;
+}
+
+.tip-select>* {
+    height: 50px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.bill-split {
+    background-color: var(--Very-dark-cyan);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.output-bill {
+    display: flex;
+    justify-content: space-between;
+}
+
+.output-tip {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    color: #fff;
+}
+
+.output-tip:nth-child(2) {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.person {
+    font-size: 14px;
+    color: var(--Grayish-cyan);
+    font-weight: 500;
+}
+
+.reset {
+    width: 100%;
+    height: 40px;
+    background-color: var(--Strong-cyan);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--Very-dark-cyan);
+}
+
+.user-tip {
+    margin-top: 20px;
+    color: green;
+}
+
+.person-number {
+    margin-top: 20px;
+}
+
+.show-bill {
+    color: var(--Strong-cyan);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:900px) {
+    main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-element {
+        max-width: 800px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .tip-select {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 10px;
+    }
+
+    .tip-select>* {
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .bill-split {
+        width: 310px;
+    }
+
+    .biil-amount,
+    .party {
+        width: 310px;
+    }
+
+    .reset {
+        margin-top: 44px;
+    }
+
+    .output-tip:nth-child(2) {
+        margin-top: 50px;
+    }
+
+    /* ---- Hover Effect---- */
+
+    button:hover {
+        background-color: var(--Light-grayish-cyan);
+        color: var(--Very-dark-cyan);
+    }
+
+    input:focus {
+        outline: 2px solid var(--Very-dark-cyan);
+    }
+}

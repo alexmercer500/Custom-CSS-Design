@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="Source/images/favicon-32x32.png">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="source/images/logo.svg" alt="calculator Logo">
+  </header>
+  <main>
+    <div class="box-element">
+      <div class="bill-calculate">
+        <p class="user-bill">Bill</p>
+        <div class="currency">
+          <input type="number" min="0" placeholder="0" class="number-info biil-amount">
+          <img src="source/images/indian-rupee.svg" alt="Rupee Symbol">
+        </div>
+        <p class="user-tip"> Select Tip % </p>
+        <div class="tip-select">
+          <button class="tip-btn">5%</button>
+          <button class="tip-btn">10%</button>
+          <button class="tip-btn">15%</button>
+          <button class="tip-btn">25%</button>
+          <button class="tip-btn">50%</button>
+          <input class="custom-tip" type="number" min="0" max="1000" placeholder="Custom">
+        </div>
+
+        <p class="person-number">Number of People</p>
+        <div class="people-icon">
+          <input type="number" min="0" max="1000" placeholder="0" class="number-info party">
+          <img src="source/images/user-large-solid.svg" alt="Pesron symbol">
+        </div>
+      </div>
+
+      <div class="bill-split">
+        <div class="output-tip">
+          <div>
+            <p class="output-bill"> Tip Amount</p>
+            <p class="person"> / person</p>
+          </div>
+          <h1 class="show-bill" id="tipToe">0</h1>
+        </div>
+        <div class="output-tip">
+          <div>
+            <p class="output-bill"> Total</p>
+            <p class="person"> / person</p>
+          </div>
+          <h1 class="show-bill" id="billToe">0</h1>
+        </div>
+        <button class="reset">Reset</button>
+
+      </div>
+    </div>
+  </main>
+  <script src="Javascript/app.js"></script>
+</body>
+
+</html>
