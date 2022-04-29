@@ -1,0 +1,22 @@
+button {
+    width: 50%;
+    height: 50px;
+    border: none;
+    background-color: $Bright-Red;
+    color: $Vary-Light-Gray;
+    font-size: $Base-Font;
+    border-radius: 30px;
+    font-weight: 800;
+
+    @include sm {
+        max-width: 200px;
+        transition: 0.3s ease-in;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            outline: 2px solid $Bright-Red;
+            color: $Bright-Red;
+        }
+    }
+}

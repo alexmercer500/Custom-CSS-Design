@@ -1,0 +1,234 @@
+.box {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+    background-image: url(back/bg-tablet-pattern.svg);
+    background-position: center;
+    background-size: cover;
+    max-width: 1100px;
+    .box-intro {
+
+        @include sm {
+            max-width: 500px;
+            margin: 40px auto;
+        }
+    }
+
+    @include lg {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 50px auto;
+
+        .box-intro {
+            text-align: left;
+            max-width: 350px;
+
+            & > * {
+                margin: 40px 0;
+            }
+        }
+        
+    }
+    img {
+        max-width: 100%;
+    }
+    .box-intro p {
+        line-height: 2rem;
+    }
+}
+
+.application {
+    margin-top: 100px;
+    max-width: 1200px;
+
+    .application-section {
+        @include sm {
+            max-width: 450px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include lg {
+        display: flex;
+        justify-content: center;
+
+        & > * {
+            margin: 0;
+            text-align: left;
+        }
+        .application-section {
+            max-width: 450px;
+        }
+        .application-section h1 {
+            margin:100px 0 0 10px ;
+        }
+
+        .application-section p {
+            max-width: 350px;
+            line-height: 2rem;
+        }
+        .application-uses span {
+            background-color: white !important;
+        }
+        .application-uses p{
+            margin-left: 80px;
+        }
+    }
+
+    .application-section p {
+        margin: 20px 13px;
+    }
+
+    .application-box {
+        margin-top: 50px;
+
+       
+        .application-uses {
+            margin: 50px auto 0 auto;
+            max-width: 550px;
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: $Base-Font;
+                background-color: $Very-Pale-Red;
+                width: 100%;
+                border-radius: 50px 0 0 50px;
+                margin-left: 10px;
+
+                h2 {
+                    font-size: $Base-Font;
+                    background-color: $Bright-Red;
+                    padding: 10px 20px;
+                    border-radius: 50px;
+                }
+
+                h3 {
+                    font-size: clamp(14px, 3vw, 1.5rem);
+                    margin-left: 10px;
+                }
+            }
+
+            p {
+                text-align: left;
+                line-height: 1.5rem;               
+            }
+        }
+
+    }
+}
+
+.tastimonial {
+    margin-top: 100px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition:  0.2;
+
+    @include sm {
+        padding-bottom: 10px;
+    }
+
+    .tastimonial-page {
+        position: relative;
+        transition: 0.2s;
+
+        .review {
+            width: fit-content;
+            height: 250px;
+            position: absolute;
+            top: -120px;
+            background-color: $Very-Pale-Red;
+            padding: 20px 0;
+            border: 1px solid $Bright-Red;
+
+            @include sm {
+                max-width: 400px;
+            }
+            @include md {
+                max-width: 480px;
+            }
+
+            img {
+                width: 80px;
+                height: 80px;
+                margin-top: -60px;
+                outline: 2px solid $Bright-Red;
+                border-radius: 50%;
+            }
+
+            h1 {
+                font-size: $Base-Font + 4px;
+                margin-top: 20px;
+            }
+        }
+
+        .range-dots {
+            height: 20px;
+            width: 100%;
+            @include center-items;
+            position: absolute;
+            bottom: -185px;
+            cursor: pointer;
+          
+            p {
+                margin: 10px 5px;
+                height: 15px;
+                width: 15px;
+                background-color: $Very-Pale-Red;
+                border-radius: 50%;
+            }
+            p.active {
+                background-color: $Bright-Red;
+            }
+        }
+    }
+    button {
+      margin: 0 auto;
+    }
+}
+.review {
+    transition: 0.6s;
+}
+.dots {
+    transition: 0.6s;
+}
+.trials {
+    background-color: $Bright-Red;
+    margin-top: 100px;
+    height: fit-content;
+    padding: 40px 0;
+    @include center-items;
+    flex-direction: column;
+
+    @include lg {
+        flex-direction: row;
+        justify-content: space-around;
+        h1 {
+            max-inline-size: 500px;
+            text-align: left;
+        }
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        margin: 20px;
+        color: $Vary-Light-Gray;
+    }
+
+    button {
+        background-color: $Very-Pale-Red;
+        color: $Bright-Red;
+
+        &:hover {
+            background-color: $Bright-Red;
+            color: white;
+            outline: 2px solid white;
+        }
+    }
+}
