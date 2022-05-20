@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="upper">
+      <img class="logo" src="images/logo.svg" alt="Sneaker Company">
+      <input type="checkbox">
+      <label for="checkbox" id="labelCheck"></label>
+      <ul>
+        <li><a href="#"> Collections</a></li>
+        <li><a href="#"> Men</a></li>
+        <li><a href="#"> Women</a></li>
+        <li><a href="#"> About</a></li>
+        <li><a href="#"> Contact</a></li>
+      </ul>
+      <div class="cartitem">
+        <img class="cart" src="images/icon-cart.svg" alt="Your Cart Items">
+        <p id="cartlist"></p>
+      </div>
+      <img class="avatar" src="images/image-avatar.png" alt="Avatar">
+    </div>
+    <div class="use-profile">
+      <ul class="user-info">
+        <li><a href="#">My Profile</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Wishlist</a></li>
+        <li><a href="#">Notification</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+    <!-- Inside Cart item preview start here -->
+    <div class="insideCart">
+      <h3>Cart</h3>
+      <hr>
+      <div class="final-check">
+        <div class="finalCheck">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Mast wala juta">
+          <div>
+            <h4>Fall Limited Edition Sneakers</h4>
+            <h4 id="total-price"></h4>
+          </div>
+          <img id="trash" src="images/trash-outline.svg" alt="">
+        </div>
+        <button class="checkout">Checkout</button>
+      </div>
+    </div>
+    <!-- Inside Cart item preview end here -->
+  </header>
+  <main>
+    <div class="container">
+      <div class="photos">
+        <div class="photo-album">
+          <svg class="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            <path d="M137.4 406.6l-128-127.1C3.125 272.4 0 264.2 0 255.1s3.125-16.38 9.375-22.63l128-127.1c9.156-9.156 22.91-11.9 34.88-6.943S192 115.1 192 128v255.1c0 12.94-7.781 24.62-19.75 29.58S146.5 415.8 137.4 406.6z"/></svg>
+          <img class="sneaker" src="images/image-product-1.jpg" alt="product 1">
+          <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+            <path d="M118.6 105.4l128 127.1C252.9 239.6 256 247.8 256 255.1s-3.125 16.38-9.375 22.63l-128 127.1c-9.156 9.156-22.91 11.9-34.88 6.943S64 396.9 64 383.1V128c0-12.94 7.781-24.62 19.75-29.58S109.5 96.23 118.6 105.4z"/></svg>
+        </div>
+        
+        <div class="thumb">
+          <img class="preview" src="images/image-product-1.jpg" alt="Product Thumb 1">
+          <img class="preview" src="images/image-product-2.jpg" alt="Product Thumb 2">
+          <img class="preview" src="images/image-product-3.jpg" alt="Product Thumb 3">
+          <img class="preview" src="images/image-product-4.jpg" alt="Product Thumb 4">
+        </div>
+      </div>
+      <div class="box">
+        <h5> Sneaker Company</h5>
+
+        <h2> Fall Limited Edition Sneakers</h2>
+
+        <p class="para"> These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <div class="price">
+          <h3> $125.00</h3>
+          <p class="discount"> 50% </p>
+        </div>
+        <h4> $250.00</h4>
+        <div class="number">
+          <p class="remove-to">-</p>
+          <p id="shoeNumb">0</p>
+          <p class="add-to">+</p>
+        </div>
+        <button id="addutton"> Add to cart </button>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ratnesh Sahu</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
